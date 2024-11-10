@@ -1,0 +1,254 @@
+/* Color Variables */
+:root {
+    --primary-color: #89f336;
+    --secondary-color: #686969;
+    --text-color: #333;
+    --background-color: #D0D0C5;
+    --white: #ffffff;
+}
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    margin-top: 30px;
+    font-weight: 400;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+/* Container */
+.container {
+    max-width: 980px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 30px;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Main Content */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* Sidebar Navigation */
+.nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    z-index: 999;
+    transition: all linear 0.6s;
+}
+
+.nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+}
+
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Main Content Section */
+.content {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Footer */
+.footer {
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+/* Keyframe animation for sliding effect */
+@keyframes slide-animation {
+    0%, 33% { transform: translateX(0%); }
+    33.33%, 66% { transform: translateX(-100%); }
+    66.66%, 100% { transform: translateX(-200%); }
+}
+
+
+/* css slider */
+.box-area {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 70px;
+    height: 400px;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    transition: all linear 0.6s;
+    cursor: pointer;
+}
+
+.box:last-child{
+    margin-right: 0;
+}
+
+.box::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    background: #89f336;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 32px;
+    font-style: normal;
+    color: #fff;
+}
+
+
+.box h2 {
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: #f6f6f6;
+    font-weight: 600;
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.box p {
+    position: absolute;
+    bottom: 10px;
+    left: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #f6f6f6;
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.box.active h2{
+    opacity: 1;
+}
+
+.box.active p{
+    opacity: 1;
+}
+
+.active{
+    width: 100%;
+    transition: all linear 0.6s;
+}
