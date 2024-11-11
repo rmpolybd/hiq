@@ -279,9 +279,7 @@ color: var(--white);
     gap: 15px;
 }
 
-
-  
-  .blog-slider {
+.blog-slider {
     position: relative;
     max-width: 800px;
     margin: auto;
@@ -293,7 +291,7 @@ color: var(--white);
   
   .blog-slider__wrp {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease; /* Smooth transition */
   }
   
   .blog-slider__item {
@@ -349,4 +347,3 @@ color: var(--white);
   
   .prev { left: 10px; }
   .next { right: 10px; }
-  
