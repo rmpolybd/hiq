@@ -50,6 +50,11 @@ p {
     color: var(--secondary-color);
 }
 
+a{
+    color: var(--primary-color); 
+}
+
+
 /* Container */
 .container {
     max-width: 980px;
