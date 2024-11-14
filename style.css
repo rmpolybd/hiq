@@ -322,3 +322,108 @@ color: var(--white);
     color: var(--white);
     font-size: 14px;
 }
+
+
+.best {
+    gap: 30px;
+    display: grid;
+}
+
+.best-item {
+    display: grid;
+    margin-top: 30px;
+}
+
+.best-item.slide-right{grid-template-columns: 2fr 1.5fr; }
+.best-item.slide-left{grid-template-columns: 1.5fr 2fr;}
+
+.shadow {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+/*product slider*/
+.best-slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 30px 0;
+}
+  .best-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .best-slide {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0px 8px 8px 0px;
+    border: 5px solid var(--white);
+    border-left: 0;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+    flex: none;
+}
+
+.slide-left .best-slide {
+    border-radius: 8px 0px 0px 8px;
+    border: 5px solid var(--white);
+    border-right: 0;
+}
+  
+.best-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    line-height: 0px;
+    transition: background-color 0.3s;
+}
+
+.best-nav:hover{
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+  
+  .best-left {
+    left: 10px;
+  }
+  
+  .best-right {
+    right: 10px;
+  }
+  
+  .best-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .best-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color:var(--white);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .best-dot.active {
+    background-color: var(--primary-color);
+  }
+  
