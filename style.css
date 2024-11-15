@@ -57,7 +57,7 @@ a{
 
 /* Container */
 .container {
-    max-width: 980px;
+    max-width: 960px;
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 30px;
@@ -67,8 +67,7 @@ a{
 
 /* Header */
 .header {
-    background: rgb(252,252,255);
-background: linear-gradient(90deg, #D0D0C5 0%, rgba(137,243,54,1) 50%, #D0D0C5 100%);
+    background: linear-gradient(90deg, #00ff0000 0%, rgba(137, 243, 54, 1) 50%, #00ff0000 100%);
     backdrop-filter: blur(8px);
     color: var(--white);
     padding: 20px;
@@ -430,7 +429,13 @@ color: var(--white);
 
 .menufac {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    gap: 30px;
+}
+
+.trade-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
 
@@ -452,7 +457,17 @@ color: var(--white);
     margin: 0 auto;
 }
 
-
+.manufacturing h2, .trade h2 {
+    text-align: center;
+    margin: 50px 0;
+    display: block;
+    text-decoration: underline;
+    text-decoration-color: #494949;
+    text-decoration-line: underline;
+    text-decoration-style: double;
+    text-decoration-thickness: 3px;
+    text-decoration-skip-ink: none;
+}
 
 
 
