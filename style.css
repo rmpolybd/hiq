@@ -427,3 +427,9 @@ color: var(--white);
     background-color: var(--primary-color);
   }
   
+
+.menufac {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
